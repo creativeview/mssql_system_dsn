@@ -5,6 +5,6 @@ author 'David Balharrie'
 license ''
 summary ''
 description 'A a puppet moudle to add a 64bit or 32bit System DSN for Microsoft SQL 2008 or Microsoft SQL 2012.'
-project_page 'https://github.com/creativeview/'
+project_page 'https://github.com/creativeview/mssql_system_dsn'
 
 dependency 'puppetlabs/registry', '>= 0.1.1'
