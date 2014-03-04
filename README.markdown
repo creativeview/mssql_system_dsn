@@ -1,0 +1,24 @@
+# Microsoft SQL ODBC System DSN puppet module.
+
+This module adds a ODBC System DSN for a MS SQL 2008 or 2012 database. This has been tested on Windows Server 2012.  
+
+## Installation
+
+Run this code on your puppet node using the Puppet Module Tool:
+
+$ puppet module install creativeview/mssql_system_dsn
+
+This module depends on puppetlabs/registry >= 0.1.1
+
+## Usage
+
+Example usage:
+
+class {'mssql_system_dsn':
+        dsn_name => 'vcenter',
+        db_name => 'vcdb',
+        db_server_ip => '192.168.35.20',
+        sql_version => '2012',
+        dsn_64bit => true,
+    }
+

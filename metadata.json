@@ -1,0 +1,26 @@
+{
+  "author": "David Balharrie",
+  "checksums": {
+    "manifests\\init.pp": "cd22b0dade0242bfdd95f201252236f4",
+    "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
+    "spec\\spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "tests\\init.pp": "efcdd4cf753b7ed02c51bab2e4103914",
+    "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "Modulefile": "bcebe6fba9780abe4be720a158ecc7e5",
+    "README.markdown": "da1e2a4bf4f8a5191252de30ba5e642f"
+  },
+  "dependencies": [
+    {
+      "name": "puppetlabs/registry",
+      "version_requirement": "\u003e\u003d 0.1.1"
+    }
+  ],
+  "description": "A a puppet moudle to add a 64bit or 32bit System DSN for Microsoft SQL 2008 or Microsoft SQL 2012.",
+  "license": "",
+  "name": "creativeview-mssql_system_dsn",
+  "project_page": "https://github.com/creativeview/",
+  "source": "",
+  "summary": "",
+  "types": [],
+  "version": "0.3.0"
+}
