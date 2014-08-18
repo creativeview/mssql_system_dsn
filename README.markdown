@@ -25,6 +25,9 @@ class {'mssql_system_dsn':
 ```
 
 ##### sql_version parameter options
-* 2012 - SQL Server Native Client 11.0 - sqlncli11.dll
-* 2008 - SQL Server Native Client 10.0 - sqlncli10.dll
-* SQLNativeClient - SQL Native Client - sqlncli.dll
+
+| Value  | Driver |
+| ------------- | ------------- |
+| 2012 | SQL Server Native Client 11.0 - sqlncli11.dll |
+| 2008 | SQL Server Native Client 10.0 - sqlncli10.dll |
+| SQLNativeClient | SQL Native Client - sqlncli.dll |
