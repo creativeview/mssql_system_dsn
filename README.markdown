@@ -1,6 +1,6 @@
 # Microsoft SQL ODBC System DSN puppet module.
 
-This module adds a ODBC System DSN for a MS SQL 2008 or 2012 database. This has been tested on Windows Server 2012.  
+This module adds a ODBC System DSN for a MS SQL 2005, 2008 or 2012 database. This has been tested on Windows Server 2012.  
 
 ## Installation
 

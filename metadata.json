@@ -16,11 +16,11 @@
     }
   ],
   "description": "A a puppet moudle to add a 64bit or 32bit System DSN for Microsoft SQL 2008 or Microsoft SQL 2012.",
-  "license": "",
+  "license": "Licensed under (Apache 2.0)",
   "name": "creativeview-mssql_system_dsn",
-  "project_page": "https://github.com/creativeview/",
-  "source": "",
-  "summary": "",
+  "project_page": "https://github.com/creativeview/mssql_system_dsn",
+  "source": "https://github.com/creativeview/mssql_system_dsn",
+  "summary": "This module adds a ODBC System DSN for a MS SQL 2008 or 2012 database.",
   "types": [],
-  "version": "0.3.0"
+  "version": "0.3.1"
 }
