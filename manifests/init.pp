@@ -32,8 +32,12 @@ else
 }
 
 if $sql_version == '2012'{
-	  $driver = "C:\\Windows\\${system_folder}\\sqlncli11.dll"
+	$driver = "C:\\Windows\\${system_folder}\\sqlncli11.dll"
     $sql_client_name = 'SQL Server Native Client 11.0'
+}
+elsif $sql_version == 'SQLNativeClient'{
+	$driver = "C:\\Windows\\${system_folder}\\sqlncli.dll"
+    $sql_client_name = 'SQL Native Client'
 }
 else
 {
