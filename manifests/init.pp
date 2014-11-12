@@ -10,6 +10,7 @@ class mssql_system_dsn (
   $dsn_name = "", 
   $db_name = "",  
   $db_server_ip = "",
+  $db_drivername = "",
   $sql_version = "2012",  
   $dsn_64bit = true
 ) {
@@ -30,25 +31,30 @@ else
   $hklm_path1 = "${hklm_path1_base}\\${dsn_name}"
   $hklm_path2 = 'HKLM\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\ODBC Data Sources'
 }
-
-if $sql_version == '2012'{
-	$driver = "C:\\Windows\\${system_folder}\\sqlncli11.dll"
-    $sql_client_name = 'SQL Server Native Client 11.0'
+if  $db_drivername == ""{
+	if $sql_version == '2012'{
+		$driver = "C:\\Windows\\${system_folder}\\sqlncli11.dll"
+		$sql_client_name = 'SQL Server Native Client 11.0'
+	}
+	elsif $sql_version == 'SQLNativeClient'{
+		$driver = "C:\\Windows\\${system_folder}\\sqlncli.dll"
+		$sql_client_name = 'SQL Native Client'
+	}
+	else
+	{
+		$driver = "C:\\Windows\\${system_folder}\\sqlncli10.dll"
+		$sql_client_name = 'SQL Server Native Client 10.0'
+	}
 }
-elsif $sql_version == 'SQLNativeClient'{
+else {
 	$driver = "C:\\Windows\\${system_folder}\\sqlncli.dll"
-    $sql_client_name = 'SQL Native Client'
+	$sql_client_name = $db_drivername
 }
-else
-{
-    $driver = "C:\\Windows\\${system_folder}\\sqlncli10.dll"
-    $sql_client_name = 'SQL Server Native Client 10.0'
-}
-   
+	   
   registry_key { [ $hklm_odbc_present1,
                    $hklm_path1_base ]:
     ensure => present,
-  } 
+  }
   
 Registry::Value {
     key   => $hklm_path1,
